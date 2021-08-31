@@ -1,0 +1,9 @@
+.item-add-subject {
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.subject-input {
+    max-width: 500px;
+}

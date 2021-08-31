@@ -1,0 +1,22 @@
+.todo-list-item{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.buttons{
+    align-self: end;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.important{
+    color: steelblue;
+}
+
+.button {
+    width: 32px;
+}
