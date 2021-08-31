@@ -61,5 +61,4 @@ function SearchPanel(props) {
     );
 }
 
-
 export default SearchPanel;

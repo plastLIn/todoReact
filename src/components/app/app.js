@@ -31,9 +31,7 @@ export default class App extends Component {
     };
 
     deleteItem = (id) => {
-
         this.setState( ({ todoData }) => {
-
            const newArray =  todoData.filter((todo) => todo.id !== id )
             return {
                 todoData: newArray
@@ -42,22 +40,16 @@ export default class App extends Component {
     };
 
     addItem = (subj) => {
-
         const newSubject = this.createSubjectForm(subj);
-
         this.setState(({ todoData }) => {
-
             const newArray = [
                 ...todoData,
                 newSubject
             ];
-
             return {
                 todoData: newArray
             };
-
         });
-
     };
 
     togglePropStatus = (arr, id, propName) => arr.map((el) => {
@@ -92,7 +84,6 @@ export default class App extends Component {
         if (term.length === 0) {
             return items;
         }
-
         return items.filter((item) => item.label.toLowerCase().indexOf(term.toLowerCase()) > -1);
     }
 
@@ -101,9 +92,9 @@ export default class App extends Component {
             case 'all':
                 return items;
             case 'active':
-                return items.filterButton((item) => !item.done);
+                return items.filter((item) => !item.done);
             case 'done':
-                return items.filterButton((item) => item.done);
+                return items.filter((item) => item.done);
             default:
                 return items;
         }
@@ -115,13 +106,10 @@ export default class App extends Component {
 
 
     render() {
-
         const { todoData, term, filterButton } = this.state;
         const visibleItems = this.filterShow(this.search(todoData, term), filterButton);
-
         const doneElemCount = this.state.todoData.filter((el) => el.done === true).length;
         const elementCount = this.state.todoData.length - doneElemCount;
-
         return (
             <div className="main">
                 <AppHeader
